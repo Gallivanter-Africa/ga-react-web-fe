@@ -44,12 +44,12 @@ const GalliHeader = ({
 
   return (
     <div className="sticky top-0 z-50 bg-white w-full h-[72px] md:h-[88px] shadow-md items-center flex justify-center">
-      <div className="flex align-middle items-center justify-between mx-[16px] md:mx-[40px] lg:mx-[100px] w-full max-w-[1920px]">
-        <div className="flex items-center gap-3 md:gap-12 ">
+      <div className="flex align-middle items-center justify-between container">
+        <div className="flex items-end gap-3 md:gap-12 ">
           {/* <img className="h-10" src="/assets/images/icon.png" alt="" /> */}
           <img
-            className="h-10"
-            src="/assets/images/logo.png"
+            className="h-8 lg:h-10"
+            src="/assets/images/logo-black.png"
             alt=""
             onClick={() => {
               navigate("/");

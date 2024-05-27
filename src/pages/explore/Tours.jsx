@@ -39,7 +39,7 @@ export function TourCard({ data }) {
         {/* Card Body */}
         <div className="p-4">
           {/* Title */}
-          <h2 className="text-xl font-semibold mb-2">{data.title}</h2>
+          <h2 className="text-xl font-semibold mb-2 line-clamp-2">{data.title}</h2>
 
           {/* Date */}
           <p className="text-gray-600 text-sm mb-2 flex items-center">
@@ -230,7 +230,7 @@ const Tours = () => {
     <>
       <div>
         <GalliHeader />
-        <div className="max-w-[1100px] sm:mt-10 mx-auto p-5  ">
+        <div className="container sm:mt-10 mx-auto">
           <div className="flex justify-between items-center">
             <h1 className=" text-xl capitalize sm:text-2xl font-bold text-black-ercas">
               Trips
@@ -432,7 +432,7 @@ const Tours = () => {
             </div>
           </div>
 
-          <div className="tour-cards mt-10 grid sm:grid-cols-2 md:grid-cols-3 gap-5">
+          <div className="tour-cards mt-10 grid sm:grid-cols-2 md:grid-cols-3 gap-5 lg:grid-cols-4">
             {isLoading ? (
               <ClipLoader />
             ) : (

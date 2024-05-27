@@ -18,7 +18,9 @@ import CreatedTours from "./pages/dashboard/creator/CreatedTours";
 import CreatorProfile from "./pages/dashboard/creator/CreatorProfile";
 import { CreateTour } from "./pages/dashboard/creator/CreateTour";
 import Overview from "./pages/dashboard/creator/Overview";
+// eslint-disable-next-line no-unused-vars
 import SingleTourDetails from "./pages/explore/SingleTourDetails";
+import NewSingleTourDetails from "./pages/explore/NewSingleTourDetails";
 import { UserDashboardLayout } from "./pages/dashboard/user/UserDashboardLayout";
 import { ToursJoined } from "./pages/dashboard/user/ToursJoined";
 import { UserProfile } from "./pages/dashboard/user/UserProfile";
@@ -74,7 +76,8 @@ const App = () => {
           <Route path="google/callback" element={<GoogleCallback />} />
         </Route>
         <Route path="/explore" element={<Tours />} />
-        <Route path="/explore/tour/:id" element={<SingleTourDetails />} />
+        {/* <Route path="/explore/tour/:id" element={<SingleTourDetails />} /> */}
+        <Route path="/explore/tour/:id" element={<NewSingleTourDetails />} />
         <Route
           path="view-creator-tour/:id"
           element={

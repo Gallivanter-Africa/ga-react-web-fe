@@ -17,33 +17,34 @@ const Footer = () => {
   // const navigate = useNavigate();
 
   return (
-    <div className=" p-[16px] md:p-[64px] items-center justify-center flex flex-col">
+    <div className="container py-4 items-center justify-center flex flex-col">
       <Divider className="bg-[#bdbdbd]" />
-      <div className="sm:flex-row flex-col sm:gap-0 gap-5 flex sm:mt-24  max-w-[1920px]">
-        <div className="sm:w-2/3">
-          <img
-            src="/assets/images/logo.png"
-            alt=""
-            className="mb-6 w-[120px]"
-          />
-          <p>
-            {/* Gallivanter is a dynamic platform designed to connect and empower
+      <div className="md:grid md:grid-cols-6">
+        <div className="space-y-8 md:col-span-2">
+          <div className="space-y-4">
+            <img
+              src="/assets/images/logo-black.png"
+              alt=""
+              className="h-8 lg:h-10"
+            />
+            <p className="text-sm">
+              {/* Gallivanter is a dynamic platform designed to connect and empower
             three distinct user groups within the world of travel and adventure:
             Tourists, Local Guides, and Tour Agents/Providers. */}
-            Gallivanter helps you manage your tour operations seamlessly. We are
-            the operating system for tour businesses in Africa.
-          </p>
-        </div>
-        <div className="flex gap-[32px]">
-          <FaTwitter
-            size={24}
-            color={`#381914`}
-            className="cursor-pointer"
-            onClick={() => {
-              window.open("https://twitter.com/GallivanterAfri/", "_blank");
-            }}
-          />
-          <FaYoutube
+              Gallivanter helps you manage your tour operations seamlessly. We
+              are the operating system for tour businesses in Africa.
+            </p>
+          </div>
+          <div className="flex gap-4 items-center justify-between">
+            <FaTwitter
+              size={24}
+              color={`#381914`}
+              className="cursor-pointer"
+              onClick={() => {
+                window.open("https://twitter.com/GallivanterAfri/", "_blank");
+              }}
+            />
+            {/* <FaYoutube
             size={24}
             color={`#381914`}
             className="cursor-pointer"
@@ -53,42 +54,42 @@ const Footer = () => {
                 "_blank"
               )
             }
-          />
+          /> */}
 
-          <FaFacebook
-            size={24}
-            color={`#381914`}
-            className="cursor-pointer"
-            onClick={() => {
-              window.open(
-                " https://www.facebook.com/profile.php?id=61557671332594/",
-                "_blank"
-              );
-            }}
-          />
-          <FaInstagram
-            size={24}
-            color={`#381914`}
-            className="cursor-pointer"
-            onClick={() => {
-              window.open(
-                " https://www.instagram.com/gallivanterafrica/",
-                "_blank"
-              );
-            }}
-          />
-          <FaLinkedin
-            size={24}
-            color={`#381914`}
-            className="cursor-pointer"
-            onClick={() =>
-              window.open(
-                "https://www.linkedin.com/company/gallivanter-africa/",
-                "_blank"
-              )
-            }
-          />
-          <FaSnapchat
+            <FaFacebook
+              size={24}
+              color={`#381914`}
+              className="cursor-pointer"
+              onClick={() => {
+                window.open(
+                  " https://www.facebook.com/profile.php?id=61557671332594/",
+                  "_blank"
+                );
+              }}
+            />
+            <FaInstagram
+              size={24}
+              color={`#381914`}
+              className="cursor-pointer"
+              onClick={() => {
+                window.open(
+                  " https://www.instagram.com/gallivanterafrica/",
+                  "_blank"
+                );
+              }}
+            />
+            <FaLinkedin
+              size={24}
+              color={`#381914`}
+              className="cursor-pointer"
+              onClick={() =>
+                window.open(
+                  "https://www.linkedin.com/company/gallivanter-africa/",
+                  "_blank"
+                )
+              }
+            />
+            {/* <FaSnapchat
             size={24}
             color={`#381914`}
             className="cursor-pointer"
@@ -98,16 +99,19 @@ const Footer = () => {
                 "_blank"
               )
             }
-          />
-          <FaTiktok
-            size={24}
-            color={`#381914`}
-            className="cursor-pointer"
-            onClick={() =>
-              window.open("https://tiktok.com/@gallivanterafrica/", "_blank")
-            }
-          />
+          /> */}
+            <FaTiktok
+              size={24}
+              color={`#381914`}
+              className="cursor-pointer"
+              onClick={() =>
+                window.open("https://tiktok.com/@gallivanterafrica/", "_blank")
+              }
+            />
+          </div>
         </div>
+
+        <div className="md:col-span-4"></div>
       </div>
     </div>
   );

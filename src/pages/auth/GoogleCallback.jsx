@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useGoogleAuthCallbackQuery } from "../../redux/api/AuthApi";
 import { ClipLoader } from "react-spinners";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setToken, setUser } from "../../redux/slices/authToken";
 import { toast } from "react-toastify";
@@ -19,7 +19,7 @@ const GoogleCallback = () => {
   const [googleAuthCallback, { data, isLoading, error }] =
     useGoogleAuthCallbackQuery();
 
-  console.log(client_id, response_type, redirect_uri, access_type, scope);
+  // console.log(client_id, response_type, redirect_uri, access_type, scope);
   useEffect(async () => {
     try {
       await googleAuthCallback({

@@ -38,3 +38,18 @@ export function formatDateToYYYYMMDD(isoDateString) {
 
   return `${year}-${month}-${day}`;
 }
+
+/**
+ * Formats start and end date into no of days
+ * ref - https://stackoverflow.com/a/2627493
+ * @param {Date | string} startDate
+ * @param {Date | string} endDate
+ * @returns {number}
+ */
+export function formatDatesIntoNoOfDays(startDate, endDate) {
+  const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+
+  return Math.round(
+    Math.abs((new Date(startDate) - new Date(endDate)) / oneDay)
+  );
+}

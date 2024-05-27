@@ -165,7 +165,7 @@ const SingleTourDetails = () => {
                     {joining ? (
                       <ClipLoader size={16} color="#fff" />
                     ) : (
-                      "Add to Whishlist"
+                      "Add to Wishlist"
                     )}
                   </button>
                 </div>

@@ -2,7 +2,13 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
-import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
+import {
+  Link,
+  NavLink,
+  Outlet,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { useForm } from "react-hook-form";
 import { Alert, Collapse, FormHelperText } from "@mui/material";
@@ -146,6 +152,7 @@ export const SignInAsCreator = () => {
 
 export const SignInAsUser = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const form = useForm();
   const { register, handleSubmit, formState } = form;
   const { errors } = formState;
@@ -169,7 +176,15 @@ export const SignInAsUser = () => {
       toast.success("Logged in successfully");
       dispatch(setToken(data?.token));
       // dispatch(setUser(data?.data?.user));
-      navigate("/user/joined-tours");
+
+      const queryParams = new URLSearchParams(location.search);
+      const callbackUrl = queryParams.get("callbackUrl");
+
+      if (callbackUrl) {
+        navigate(callbackUrl);
+      } else {
+        navigate("/user/joined-tours");
+      }
     }
   }, [error, data]);
   console.log(data);
